@@ -1,0 +1,31 @@
+{
+  "name": "combat_sim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "clean": "npx tsc --clean",
+    "lint": "npx eslint ./src/**/*",
+    "format": "npx prettier --write \"./src/*.+(ts|json)\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx watch"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sacho/combat_sim.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sacho/combat_sim/issues"
+  },
+  "homepage": "https://github.com/sacho/combat_sim#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  }
+}
