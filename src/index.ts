@@ -23,6 +23,18 @@ class March {
 
 }
 
+class MarchState {
+
+    constructor(
+        public rage = 0,
+        public damage_done = 0,
+        public damage_taken = 0
+    ) {
+    }
+
+    
+}
+
 type SimulationConfig = {
     runs: number
     player_march: March,
@@ -40,15 +52,23 @@ class Simulation {
     }
 
     run() {
-        for(let iter = 0; iter < config.runs; iter++) {
+        for(let iter = 1; iter <= config.runs; iter++) {
             this.results.push(this.single_run(iter))
         }
     }
 
     single_run(iter: number) {
         console.log(`Iteration: ${iter}`)
-
+        const num_rounds = 30
+        for(let round = 1; round <= num_rounds; round++) {
+            const results = this.advance_round(round)
+            console.log(results)
+        }
         return {}
+    }
+
+    advance_round(round: number) { 
+        
     }
 }
 
@@ -59,3 +79,5 @@ const config = {
 }
 
 const sim = new Simulation(config)
+
+sim.run()
